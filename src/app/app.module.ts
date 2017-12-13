@@ -6,6 +6,8 @@ import { AppComponent } from './app.component';
 import { WelcomeComponent } from './home/home.component';
 import { PageNotFoundComponent } from './page-not-found.component';
 
+import { ProductService } from './services/product.service'
+
 
 @NgModule({
   declarations: [
@@ -21,7 +23,7 @@ import { PageNotFoundComponent } from './page-not-found.component';
       { path: '**', component: PageNotFoundComponent }
     ])
   ],
-  providers: [],
+  providers: [ProductService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
